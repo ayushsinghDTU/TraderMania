@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗺️Pathfinding Visualizer</h1>
+            <p>Watch Dijkstra's algorithm find the shortest path in real-time!</p>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-success">🚀 Start</button>
+            <button id="endBtn" class="btn btn-success">🏁 End</button>
+            <button id="clearBtn" class="btn btn-danger">🗑️Grid Clear</button>
+            <button id="clearPathBtn" class="btn btn-primary">🔄 Path Clear</button>
+            <button id="mazeBtn" class="btn btn-primary">🌟 Generate Maze</button>
+        </div>
+
+        <div class="grid-container">
+            <div id="grid" class="grid"></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #00b894, #00a085);"></div>
+                <span>Start Node</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #fd79a8, #e84393);"></div>
+                <span>End Node</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #2c3e50;"></div>
+                <span>Wall</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #74b9ff, #0984e3);"></div>
+                <span>Visited</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #fdcb6e, #e17055);"></div>
+                <span>Shortest Path</span>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-value" id="visitedCount">0</span>
+                <span>Nodes Visited</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="pathLength">0</span>
+                <span>Path Length</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="timeElapsed">0ms</span>
+                <span>Time Elapsed</span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <strong>Instructions:</strong> Click and drag to draw walls. The green square is the start, the pink square is the end. 
+            Click "Start" to watch finding of shortest path!
+        </div>
+    </div>
+
+    <script src="js/pathfinder.js"></script>
+</body>
+</html>
